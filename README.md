@@ -8,7 +8,7 @@ Dabei sollen Fragen multimedial aufbereitet werden können. Etwa durch das einbi
 
 ## Installation
 
-### 1. Projekt initialisieren
+1. Projekt initialisieren
 
 Initialisiere ein neues Expo-Projekt mit dem Befehl:
 
@@ -17,18 +17,18 @@ expo init dein-expo-projekt
 cd dein-expo-projekt
 
 
-### 2. .js-Dateien übertragen
+2. .js-Dateien übertragen
 
 Kopiere die relevanten .js-Dateien aus dem GitHub-Repository in das Projektverzeichnis.
 
-### 3. .Abhängigkeiten installieren
+3. .Abhängigkeiten installieren
 
 installiere die nötigen Abhängigkeiten aus der package.json:
 
 ```bash
 npm install
 
-### 4. Expo-App starten
+4. Expo-App starten
 
 ```bash
 npx expo start
