@@ -68,7 +68,7 @@ REACT_APP_FIREBASE_MEASUREMENT_ID=your-measurement-id
 ---
 ## Projektbeschreibung
 
-Nach dem Login soll der Editor zunächst einen Kurs auswählen, um die Kompetenzen/Falkten /Quellen von diesem bearbeieten zu können. Erst nach Auswahl des Kurses sind diese Optionen im
+Nach dem Login soll der Editor zunächst einen Kurs auswählen, um die Kompetenzen/Fakten/Quellen von diesem bearbeiten zu können. Erst nach Auswahl des Kurses sind diese Optionen im
 Drawer-Menü auswählbar. Selbe Logik gilt für die Auswahl des Spiels, welche das editieren von Challenges und Achievements ermöglichen soll.
 Mit dem jetzigen Stand der Anwendung können bislang nur die Kompetenzen des Kurses "Klimawandel" bearbeitet werden.
 
