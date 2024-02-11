@@ -10,7 +10,10 @@ import { ChallengesScreen, FaktenScreen, AchievementsScreen, QuellenScreen, Kurs
 import KompetenzWahlScreen from './Kompetenzenwahl'
 import KategorienWahlScreen from './Kategorienwahl'
 import EditScreen from './EditScreen';
-import ExpandableSection from './UI-Elemente/ExpandableSection';
+import ExpandableSection from './UI-Elemente/ExpandableSection';// index.js oder App.js
+
+
+
 
 
 const Drawer = createDrawerNavigator();

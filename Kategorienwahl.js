@@ -13,22 +13,17 @@ import { Tooltip } from 'react-native-elements';
 
 
 
+
+
 const firebaseConfig = {
-   apiKey: "AIzaSyDuz4Lrq8XO0zY8KvSsTRIh7EVBusRJpWA",
-
-  authDomain: "zweites-projekt-7d9a4.firebaseapp.com",
-
-  databaseURL: "https://zweites-projekt-7d9a4-default-rtdb.europe-west1.firebasedatabase.app",
-
-  projectId: "zweites-projekt-7d9a4",
-
-  storageBucket: "zweites-projekt-7d9a4.appspot.com",
-
-  messagingSenderId: "472356646467",
-
-  appId: "1:472356646467:web:dc968f12d6347762b2aef6",
-
-  measurementId: "G-XTHVDF9F77"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 
 };
 
