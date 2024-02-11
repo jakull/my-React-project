@@ -38,7 +38,22 @@ Drücke dann w um die Anwendung im Web-modus zu starten.
 ---
 ## Einbindung der Firebase Datenbank
 
-Um die Firebase-Datenbank in dieses Projekt zu integrieren, müssen Sie zunächst Ihre Firebase-Projektkonfigurationsdaten in einer .env-Datei speichern. Erstellen Sie eine .env-Datei im Stammverzeichnis Ihres Projekts und fügen Sie Ihre Firebase-Konfigurationsvariablen hinzu, wie im folgenden Beispiel gezeigt:
+Dieses Projekt verwendet die Firebase Realtime Database von Google. Um auf den Datensatz des Projekts zuzugreifen erstellen sie zuerst einen Firebase Account und legen dort eine neue Realtime Database an.
+Prüfen Sie die Zugriffsregelungen. Zu Testzwecken können diese auf
+```bash
+{
+  "rules": {
+    ".read": "auth == null",
+    ".write": "auth == null"
+  }
+}
+
+```
+gestellt werden.
+Importieren Sie dann die JSON-Datei aus dem Repositorie in die neu erstellte Datenbank.
+
+
+Um die Firebase-Datenbank in dieses Projekt zu integrieren, müssen Sie zuletzt noch Ihre Firebase-Projektkonfigurationsdaten in einer .env-Datei speichern. Erstellen Sie eine .env-Datei im Stammverzeichnis Ihres Projekts und fügen Sie Ihre Firebase-Konfigurationsvariablen hinzu, wie im folgenden Beispiel gezeigt:
 
 ```plaintext
 REACT_APP_FIREBASE_API_KEY=your-api-key
