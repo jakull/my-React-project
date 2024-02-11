@@ -17,11 +17,11 @@ expo init dein-expo-projekt
 cd dein-expo-projekt
 ```
 
-2. .js-Dateien übertragen
+2. js-Dateien übertragen
 
 Kopiere die relevanten .js-Dateien aus dem GitHub-Repository in das Projektverzeichnis.
 
-3. .Abhängigkeiten installieren
+3. Abhängigkeiten installieren
 
 installiere die nötigen Abhängigkeiten aus der package.json:
 
@@ -36,5 +36,31 @@ npx expo start
 Drücke dann w um die Anwendung im Web-modus zu starten.
 
 ---
+## Einbindung der Firebase Datenbank
 
+Um die Firebase-Datenbank in dieses Projekt zu integrieren, müssen Sie zunächst Ihre Firebase-Projektkonfigurationsdaten in einer .env-Datei speichern. Erstellen Sie eine .env-Datei im Stammverzeichnis Ihres Projekts und fügen Sie Ihre Firebase-Konfigurationsvariablen hinzu, wie im folgenden Beispiel gezeigt:
+
+```plaintext
+REACT_APP_FIREBASE_API_KEY=your-api-key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+REACT_APP_FIREBASE_DATABASE_URL=your-database-url
+REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+REACT_APP_FIREBASE_APP_ID=your-app-id
+REACT_APP_FIREBASE_MEASUREMENT_ID=your-measurement-id
+---
 ## Projektbeschreibung
+
+Nach dem Login soll der Editor zunächst einen Kurs auswählen, um die Kompetenzen/Falkten /Quellen von diesem bearbeieten zu können. Erst nach Auswahl des Kurses sind diese Optionen im
+Drawer-Menü auswählbar. Selbe Logik gilt für die Auswahl des Spiels, welche das editieren von Challenges und Achievements ermöglichen soll.
+Mit dem jetzigen Stand der Anwendung können bislang nur die Kompetenzen des Kurses "Klimawandel" bearbeitet werden.
+
+Wird der Kurs Klimawandel gewählt, so sind in der Folge im Drawer die Auswahlmöglichkeiten Kompetenzen/Fakten/Quellen auswählbar. Unter Kompetenzen kann der Aufbau einer Frage definiert werden.
+
+Im KompetenzenWahlScreen kann nun, bei korrekter Einbindung der Firebase Datenbank, eine bestehende Frage zum Editieren gewählt werden. Mit einem Suchfeld können die angezeigten Optionen im Picker
+eingegrenzt werden. Außerdem können an dieser Stelle neue Kompetenzen (Fragen/Storyelemente) hinzugefügt oder entfernt werden.
+
+Wird eine Kompetenz gewählt oder neu hinzugefügt, so gelangt man auf den KategorienWahlScreen. Hier kann der Aufbau einer Frage definiert werden.
+Unter "Answers" können hier die Antwortmöglichkeiten(grün richtig/ rot falsch) aufgelistet werden. Diese Antwortmöglichkeiten können selbst wieder aus verschiedenen Content-Elementen (Text,Image,Video,Audio.. ) bestehen. Der Aufbau einer Antwort kann mit dem Edit-Icon
+rechts neben dem beschreibenden Antwort-Text definiert werden. Im EditScreen kann auch die Validity (true/false) der Antwortmöglichkeit geändert werden.
